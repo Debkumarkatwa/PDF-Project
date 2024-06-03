@@ -4,7 +4,7 @@
 # Installation
 1. Fork/Clone/Download this repo
 
-    `git clone `
+    `git clone https://github.com/Debkumarkatwa/PDF-Project.git`
 
 2. Install uv
 
