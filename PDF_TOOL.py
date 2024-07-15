@@ -148,7 +148,7 @@ def decrypt_pdf():
     pdf_writer.close()
 
 def Extract_img():
-    reader = PdfReader("addhar.pdf")
+    reader = PdfReader(fileContents)
     page = reader.pages[0]
     count = 0
 
