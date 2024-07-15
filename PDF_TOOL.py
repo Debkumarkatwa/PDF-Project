@@ -10,7 +10,7 @@ window.geometry("440x200")
 # pic = PhotoImage(file = "bg.png")
 # lbl=Label(window,image=pic).place(x=0,y=0)
 window.configure(bg="dark green")
-window.iconbitmap("th.ico")
+# window.iconbitmap("th.ico")
 # window.resizable(False,False)
 
 def file_open():
