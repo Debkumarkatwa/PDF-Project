@@ -66,7 +66,7 @@ def reduce_size():
 
     with open(execute_name, "wb") as write:
         pdf_writer.write(write)
-    Label(win,bg="red",fg="white",text="Successfully reduced size of the pdf you gave \nIt saved into your current directory or current path.").pack(padx=10,pady=10)
+    messagebox.showinfo('Success', "Successfully reduced size of the pdf you gave \nIt saved into your current directory or current path.")
     pdf_writer.close()
  
 
@@ -92,7 +92,7 @@ def merge_pdf():
     with open(execute_name, "wb") as hello:
         pdf_writer.write(hello)
     pdf_writer.close()
-    lb=Label(win,bg="red",fg="white",text="Successfully merged the pdfs you gave \nIt saved into your current directory or current path.").pack()
+    messagebox.showinfo('Success', "Successfully merged the pdfs you gave \nIt saved into your current directory or current path.")
 
 
 # function for encrypting the pdf
@@ -119,7 +119,7 @@ def encrypt_pdf():
     pdf_writer.encrypt(passw.get())
     with open(execute_name, "wb") as helloworld:
         pdf_writer.write(helloworld)
-    lb=Label(win,bg="red",fg="white",text="So the pdf is now successfully encrypted \nIt saved into your current directory or current path.").pack()
+    messagebox.showinfo('Success', "So the pdf is now successfully encrypted \nIt saved into your current directory or current path.")
     pdf_writer.close()
 
 
@@ -146,7 +146,7 @@ def decrypt_pdf():
         pdf_writer.add_page(fuck)
     with open(execute_name, "wb") as helloworld:
         pdf_writer.write(helloworld)
-    lb=Label(win,bg="red",fg="white",text="So the pdf is now successfully decrypted \nIt saved into your current directory or current path.").pack()
+    messagebox.showinfo('Success', "So the pdf is now successfully decrypted \nIt saved into your current directory or current path.")
     pdf_writer.close()
 
 
@@ -160,7 +160,7 @@ def Extract_img():
         with open(str(count) + image_file_object.name, "wb") as fp:
             fp.write(image_file_object.data)
             count += 1
-    lb=lb=Label(win,bg="red",fg="white",text="The Images of the pdf is now successfully Extracted.\nIt saved into your current directory or current path.").pack()
+    messagebox.showinfo('Success', "The Images of the pdf is now successfully Extracted.\nIt saved into your current directory or current path.")
 
 
 # funcion for choosing option and creating responding window
@@ -250,8 +250,8 @@ def choose():
 
     else:
         win.destroy()
-        messagebox.showerror("Error","Choose correct option")
-
+        messagebox.showerror("Error","Choose correct option",master=window)
+        
     win.mainloop()
 
 
